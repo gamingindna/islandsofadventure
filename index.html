@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+            <title>Islands of Adventure</title>
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/styles.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+            <link href="https://fonts.googleapis.com/css?family=Raleway:500|Roboto+Condensed:700|Droid+Sans|Open+Sans" rel="stylesheet">
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/numberpicker.js"></script>
+            <script src="js/captions.js"></script>
+            <script src="js/video.js"></script>
+            <script src="js/main.js"></script>
+            <style type="text/css">
+                .icon-bar {
+                    background-color: black;
+                }
+                .navbar-nav {
+                    width: 100%;
+                    text-align: center;
+                }
+                .navbar-nav > li {
+                    float: none;
+                    display: inline-block;
+                }
+
+                .container {
+                    width:70%;
+                }
+
+
+
+            </style>
+            <script type="text/javascript">
+                $(window).scroll(function() {
+                    var a = $("#logo").height() + $("#navigation-bar").height();
+                    if($(document).scrollTop() > a) {
+                        $('#navigation-bar').addClass("topfixed");
+                    }
+                    if($(document).scrollTop() < (a - 100)) {
+                        $('#navigation-bar').removeClass("topfixed");
+                    }
+                });
+
+                $(function() {
+                    $('#gmap-holder').click(function(e) {
+                        $(this).find('iframe').css('pointer-events', 'all');
+                    }).mouseleave(function(e) {
+                        $(this).find('iframe').css('pointer-events', 'none');
+                    });
+                });
+
+                function homevidoncanplay() {
+                    if ($(".container").css("width") != $(window).innerWidth()+"px")
+                        $("#homevid").css("width", "100%");
+                }
+
+                $(function() {
+                    if ($(window).innerWidth() <= 768) {
+                        $("#homevid").css("width", "100%");
+                    }
+                });
+
+                $(window).resize(function() {
+                   if ($(window).innerWidth() <= 768) {
+                        $("#homevid").css("width", "100%");
+                    }
+                    else {
+                        $("#homevid").css("width", "auto");
+                    }
+                });
+
+            </script>
+        </head>
+        <body>
+        <div id="top-line-wrap">
+            <div id="top-line">
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(107, 165, 189); height: 10px;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(196, 160, 108); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(255, 208, 140); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(193, 80, 9); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(71, 78, 81); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(107, 165, 189); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(196, 160, 108); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(255, 208, 140); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(193, 80, 9); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(71, 78, 81); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(107, 165, 189); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(196, 160, 108); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(255, 208, 140); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(193, 80, 9); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(71, 78, 81); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#6ba5bd"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#c4a06c"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#ffd08c"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#c15009"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#474e51"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#6ba5bd"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#c4a06c"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#ffd08c"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#c15009"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#474e51"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#6ba5bd"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#c4a06c"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#ffd08c"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#c15009"></span></div>
+                <div class="chunk">&nbsp;<span class="filler" style="background:#474e51"></span></div>
+            </div>
+        </div>
+            <div id="logo" align="center"><br>
+                <a href="index.html"><img src="img/logo.png" width="200" alt="Mojoland logo"></a>
+            </div>
+            <nav class="navbar" id="navigation-bar" style="margin-bottom: 0px; border: 0px;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="dropdown">
+                                <a href="parks.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parks <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="parks.html#lagoonwaterpark" onclick="location.reload();">Lagoon Water Park</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="parks.html#adventurepark" onclick="location.reload();">Adventure Park</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="parks.html#aerosports" onclick="location.reload();">Aero Sports Park</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="booktickets.html">Book Tickets</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="homepage-hero-module">
+                <div class="video-container" align="center">
+                    <div class="title-container">
+                        <div class="headline">
+                            <h3 id="fullvideotext">
+                                <a id="fullvideolink" onclick="temp();">
+                                    Play full video <i class="fa fa-expand" aria-hidden="true"></i>
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="close-btn" style="display: none;" onclick="tempoff();">
+                        <span style="cursor: pointer;"><img src="img/close.png" width="32"></span>
+                    </div>
+
+                    <video id="homevid" muted autoplay loop poster="img/entrance.jpg" oncanplay="homevidoncanplay();">
+                        <source src="img/videoback.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    </video>
+
+                    <video id="fullvideo" muted autoplay style="display: none; width: 100%;">
+                        <source src="img/fullvideo.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    </video>
+                </div>
+            </div>
+            <section class="main" id="main-section" style="position: relative; top: -40px;">
+                <div class="container">
+                    <div class="row" style="background: #fff; padding-top: 10px;">
+                        <div class="col-lg-4" id="ticketwrapper">
+                            <div class="slot">
+                                <div class="blockHead"><span class="blocktext">Book Tickets</span>
+                                </div>
+                                <a href="#" class="ticket">
+                                    <b></b>
+                                    <c></c>
+                                    <d></d>
+                                    <em>
+                                        <b></b>
+                                        <c></c>
+                                    </em>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8" align="center">
+                            <form class="navbar-form">
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6">
+                                        <label for="when" class="control-label">Date</label><br>
+                                        <input type="text" id="when" name="when" class="form-control" placeholder="Date" style="padding: 5px; border: 1px solid #bbb; border-radius: 4px;" />
+                                        <script type="text/javascript">
+                                            $(function() {
+                                                $('input[name="when"]').daterangepicker({
+                                                    singleDatePicker: true,
+                                                    showDropdowns: true
+                                                },
+                                                function (start, end, label){
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+
+                                    <div class="form-group col-md-6 col-lg-6">
+                                        <label for="activity" class="control-label">Activity</label><br>
+                                        <select name="activity" id="activity" class="form-control">
+                                            <option>Lagoon Water Park</option>
+                                            <option>Adventura Adventure Park</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6">
+                                        <div class="popover-markup">
+                                            <div class="trigger form-group"><i class="fa fa-users input-icon input-icon-highlight"></i>
+                                                <label class="control-label">Number of tickets</label><br>
+                                                <input type="text" name="tickets" id="tickets" class="form-control" value="1" disabled style="cursor: pointer; background-color: #fff; padding-right: 0;" />
+                                            </div>
+                                            <div class="content hide">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-5"><strong>Children</strong><br> <i> &nbsp;</i></label>
+                                                    <div class="input-group number-spinner col-md-7">
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-danger" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></a>
+                                                        </span>
+                                                        <input type="text" disabled name="children" id="children" class="form-control text-center" value="0" max=9 min=0>
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-info" data-dir="up"><span class="glyphicon glyphicon-plus"></span></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-5"><strong>Students</strong><br> <i>&nbsp;</i></label>
+                                                    <div class="input-group number-spinner col-md-7">
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-danger" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></a>
+                                                        </span>
+                                                        <input type="text" disabled name="students" id="students" class="form-control text-center" value="0" max=9 min=0>
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-info" data-dir="up"><span class="glyphicon glyphicon-plus"></span></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-5"><strong>Adults</strong><br> <i> &nbsp;</i></label>
+                                                    <div class="input-group number-spinner col-md-7">
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-danger" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></a>
+                                                        </span>
+                                                        <input type="text" disabled name="adults" id="adults" class="form-control text-center" value="1" max=9 min=1>
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-info" data-dir="up"><span class="glyphicon glyphicon-plus"></span></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-5"><strong>Senior Citizen</strong><br> <i> &nbsp;</i></label>
+                                                    <div class="input-group number-spinner col-md-7">
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-danger" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></a>
+                                                        </span>
+                                                        <input type="text" disabled name="senior" id="senior" class="form-control text-center" value="0" max=9 min=0>
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-info" data-dir="up"><span class="glyphicon glyphicon-plus"></span></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-5"><strong>Couples</strong><br> <i> &nbsp;</i></label>
+                                                    <div class="input-group number-spinner col-md-7">
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-danger" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></a>
+                                                        </span>
+                                                        <input type="text" disabled name="couples" id="couples" class="form-control text-center" value="0" max=9 min=0>
+                                                        <span class="input-group-btn">
+                                                            <a class="btn btn-info" data-dir="up"><span class="glyphicon glyphicon-plus"></span></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <a class="btn btn-default btn-block demise">Select</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6">
+                                        <label for="when" class="control-label">Price</label><br>
+                                        <input type="text" class="form-control" disabled placeholder="Price" style="padding: 5px; border: 1px solid #bbb; border-radius: 2px;" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding-left: 15px;"><br>
+                                        <button class="btn btn-success btn-block">
+                                            <span style="font-weight: bold;">
+                                                Book Now!
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container" id="panelcontainer">
+                <div id="panel-container-main-row" class="row zoomonhover">
+                    <div class="testclass2 col-md-3 col-lg-3 col-sm-6 col-xs-6" style="padding : 10px 5px 0 5px;">
+                        <div class="testclass" onmouseover="showcaption('captionpanel1');" onmouseout="hidecaption('captionpanel1')">
+                            <div class="mobile-hack">
+                                <div class="mobile-hack-column">
+                                    <img src="img/resized/panels/1.png" alt="slides" height="200px;" class="img-responsive">
+                                </div>
+                                <div class="mobile-hack-column">
+                                    <span class="imgcaption" id="captionpanel1">
+                                        <h3>Slides</h3>
+                                       
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testclass2 col-md-3 col-lg-3 col-sm-6 col-xs-6" style="padding : 10px 5px 0 5px;">
+                        <div class="testclass" onmouseover="showcaption('captionpanel2');" onmouseout="hidecaption('captionpanel2')">
+                            <div class="mobile-hack">
+                                <div class="mobile-hack-column">
+                                    <span class="imgcaption" id="captionpanel2">
+                                        <h3>Waterfall</h3>
+                                       
+                                    </span>
+                                </div>
+                                <div class="mobile-hack-column">
+                                    <img src="img/resized/panels/2.png" alt="slides" height="200px;" class="img-responsive" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testclass2 col-md-3 col-lg-3 col-sm-6 col-xs-6" style="padding : 10px 5px 0 5px;">
+                        <div class="testclass" onmouseover="showcaption('captionpanel3');" onmouseout="hidecaption('captionpanel3')">
+                            <div class="mobile-hack">
+                                <div class="mobile-hack-column">
+                                    <img src="img/resized/panels/3.png" alt="slides" height="200px;" class="img-responsive" >
+                                </div>
+                                <div class="mobile-hack-column">
+                                    <span class="imgcaption" id="captionpanel3">
+                                        <h3>Waterhouse</h3>
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testclass2 col-md-3 col-lg-3 col-sm-6 col-xs-6" style="padding : 10px 5px 0 5px;">
+                        <div class="testclass" onmouseover="showcaption('captionpanel4');" onmouseout="hidecaption('captionpanel4')">
+                            <div class="mobile-hack">
+                                <div class="mobile-hack-column">
+                                    <span class="imgcaption" id="captionpanel4">
+                                        <h3>Adventure</h3>
+                                        
+                                    </span>
+                                </div>
+                                <div class="mobile-hack-column">
+                                    <img src="img/resized/panels/4.png" alt="slides" height="200px;" class="img-responsive" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="secondcontainer">
+                <div class="row">
+                    <br><br>
+                    
+                    <div class="col-md-6 col-lg-6">
+                        <div class="row">
+                           
+                            <div class="col-sm-12">
+                                <h4>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="mapcontainer">
+                <div class="row">
+                    <br><br>
+                   
+                    <div class="col-md-4 col-lg-4">
+                        <div class="col">
+                            
+                        </div>
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="footercontainer">
+                <div class="row">
+                    <br><br>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <h4><a href="parks.html#lagoonwaterpark">Lagoon Water Park</a></h4>
+                        <small>
+                            Palm Beach <br>
+                            Wave Pool <br>
+                            Fun Pool <br>
+                            Slides <br>
+                            Pendulum <br>
+                            Volcanic Water Fall <br>
+                            Rain Dance <br>
+                            Foam Dance <br>
+                            The Beach Shack Cafe <br>
+                        </small>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <h4><a href="parks.html#adventurepark">Adventura Adventure Park</a></h4>
+                        <small>
+                            ATV Track <br>
+                            Bungee Ejection <br>
+                            Free Fall <br>
+                            Zip lines <br>
+                            Rock Climbing <br>
+                            High Rope <br>
+                            Low Rope <br>
+                            Shooting <br>
+                            Archery <br>
+                            Sky Cycling <br>
+                        </small>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <h4><a href="parks.html#aerosports">Aero Sports</a></h4>
+                        <small>
+                            Paramotoring <br>
+                            Parasailing <br>
+                        </small>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                      
+                        <h4>Contact Us</h4>
+                        <small>
+                            <a href="mailto:kaushikdere@gmail.com">Email </a><br>
+                        </small>
+                    </div>
+                </div>
+                <hr style="background-color: #ddd; color: #ddd; border-color: #ddd;">
+                <div class="row" style="padding: 10px;">
+                    
+                    
+                </div>
+            </div>
+            <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+            <script type="text/javascript">
+                window.sr = ScrollReveal({duration: 500, distance:'30px', easing:'linear', delay:100, scale : 1});
+                sr.reveal('#panelcontainer');
+                sr.reveal('#secondcontainer');
+                sr.reveal('#mapcontainer');
+                sr.reveal('#footercontainer');
+            </script>
+        </body>
+    </html>

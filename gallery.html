@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+            <title>Islands of Adventure</title>
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/styles.css">
+            <link rel="stylesheet" href="css/fa/css/font-awesome.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Raleway:500|Roboto+Condensed:700|Droid+Sans|Open+Sans" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="js/jquery.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/masonry.pkgd.min.js"></script>
+            <script src="js/imagesloaded.pkgd.min.js"></script>
+            <style type="text/css">
+                .icon-bar {
+                    background-color: black;
+                }
+                .navbar-nav {
+                    width: 100%;
+                    text-align: center;
+                }
+                .navbar-nav > li {
+                    float: none;
+                    display: inline-block;
+                }
+                .container {
+                    width:70%;
+                }
+
+            </style>
+            <script type="text/javascript">
+                $(window).scroll(function() {
+                    var a = $("#logo").height() + $("#navigation-bar").height();
+                    if($(document).scrollTop() > a) {
+                        $('#navigation-bar').addClass("topfixed");
+                    }
+                    if($(document).scrollTop() < (a - 100)) {
+                        $('#navigation-bar').removeClass("topfixed");
+                    }
+                });
+
+                $(function() {
+                    $('#gmap-holder').click(function(e) {
+                        $(this).find('iframe').css('pointer-events', 'all');
+                    }).mouseleave(function(e) {
+                        $(this).find('iframe').css('pointer-events', 'none');
+                    });
+                });
+
+
+
+            </script>
+        </head>
+        <body>
+            <div id="top-line-wrap">
+                <div id="top-line">
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(107, 165, 189); height: 10px;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(196, 160, 108); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(255, 208, 140); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(193, 80, 9); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(71, 78, 81); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(107, 165, 189); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(196, 160, 108); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(255, 208, 140); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(193, 80, 9); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(71, 78, 81); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(107, 165, 189); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(196, 160, 108); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(255, 208, 140); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(193, 80, 9); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(71, 78, 81); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#6ba5bd"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c4a06c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#ffd08c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c15009"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#474e51"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#6ba5bd"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c4a06c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#ffd08c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c15009"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#474e51"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#6ba5bd"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c4a06c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#ffd08c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c15009"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#474e51"></span></div>
+                </div>
+            </div>
+            <div id="logo" align="center"><br>
+                <a href="index.html"><img src="img/logo.png" width="200" alt="Mojoland logo"></a>
+            </div>
+            <nav class="navbar" id="navigation-bar" style="margin-bottom: 0px; border: 0px;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="dropdown">
+                                <a href="parks.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parks <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="parks.html#lagoonwaterpark" onclick="location.reload();">Lagoon Water Park</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="parks.html#adventurepark" onclick="location.reload();">Adventure Park</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="parks.html#aerosports" onclick="location.reload();">Aero Sports Park</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="booktickets.html">Book Tickets</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12" align="center">
+                        <h1 style="font-family: 'Roboto Condensed', sans-serif;">Gallery</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <div class='grid-item'><img src='img/2.jpg' ></div>
+                <div class='grid-item'><img src='img/3.jpg' ></div>
+                <div class='grid-item'><img src='img/around.jpg' ></div>
+                <div class='grid-item'><img src='img/entrance.jpg' ></div>
+                <div class='grid-item'><img src='img/flying.jpg' ></div>
+                <div class='grid-item'><img src='img/paramotoring.jpg' ></div>
+                <div class='grid-item'><img src='img/picture.jpg' ></div>
+                <div class='grid-item'><img src='img/pool.jpg' ></div>
+                <div class='grid-item'><img src='img/raindance.jpg' ></div>
+                <div class='grid-item'><img src='img/waterpark1.jpg' ></div>
+                <div class='grid-item'><img src='img/waterpark2.jpg' ></div>
+                <div class='grid-item'><img src='img/waterpark3.jpg' ></div>
+                <div class='grid-item'><img src='img/waterpark4.jpg' ></div>
+                <div class='grid-item'><img src='img/waterpark5.jpg' ></div>
+                <div class='grid-item'><img src='img/waterpark6.jpg' ></div>
+            </div>
+            <div class="container" id="footercontainer">
+                <div class="row">
+                    <br><br>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <h4><a href="parks.html#lagoonwaterpark">Lagoon Water Park</a></h4>
+                        <small>
+                            Palm Beach <br>
+                            Wave Pool <br>
+                            Fun Pool <br>
+                            Slides <br>
+                            Pendulum <br>
+                            Volcanic Water Fall <br>
+                            Rain Dance <br>
+                            Foam Dance <br>
+                            The Beach Shack Cafe <br>
+                        </small>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <h4><a href="parks.html#adventurepark">Adventura Adventure Park</a></h4>
+                        <small>
+                            ATV Track <br>
+                            Bungee Ejection <br>
+                            Free Fall <br>
+                            Zip lines <br>
+                            Rock Climbing <br>
+                            High Rope <br>
+                            Low Rope <br>
+                            Shooting <br>
+                            Archery <br>
+                            Sky Cycling <br>
+                        </small>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <h4><a href="parks.html#aerosports">Aero Sports</a></h4>
+                        <small>
+                            Paramotoring <br>
+                            Parasailing <br>
+                        </small>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        
+                        <h4>Contact Us</h4>
+                        <small>
+                            <a href="mailto:kaushikdere@gmail.com">Email </a><br>
+                        </small>
+                    </div>
+                </div>
+                <hr style="background-color: #ddd; color: #ddd; border-color: #ddd;">
+                <div class="row" style="padding: 10px;">
+                   
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                var $grid = $('.grid').masonry({
+                    itemSelector: '.grid-item',
+                    percentPosition: true,
+                    columnWidth: '.grid-sizer'
+                });
+                // layout Masonry after each image loads
+                $grid.imagesLoaded().progress( function() {
+                    $grid.masonry();
+                });
+
+
+            </script>
+        </body>
+    </html>

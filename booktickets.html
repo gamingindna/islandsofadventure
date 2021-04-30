@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+            <title>Islands of Adventure</title>
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/styles.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+            <link href="https://fonts.googleapis.com/css?family=Raleway:500|Roboto+Condensed:700|Droid+Sans|Open+Sans" rel="stylesheet">
+            <script src="js/bootstrap.min.js"></script>
+            <style type="text/css">
+                .icon-bar {
+                    background-color: black;
+                }
+                .navbar-nav {
+                    width: 100%;
+                    text-align: center;
+                }
+                .navbar-nav > li {
+                    float: none;
+                    display: inline-block;
+                }
+
+                .container {
+                    width:70%;
+                }
+
+            </style>
+            <script type="text/javascript">
+                $(window).scroll(function() {
+                    var a = $("#logo").height() + $("#navigation-bar").height();
+                    if($(document).scrollTop() > a) {
+                        $('#navigation-bar').addClass("topfixed");
+                    }
+                    if($(document).scrollTop() < (a - 100)) {
+                        $('#navigation-bar').removeClass("topfixed");
+                    }
+                });
+
+                $(function() {
+                    $('#gmap-holder').click(function(e) {
+                        $(this).find('iframe').css('pointer-events', 'all');
+                    }).mouseleave(function(e) {
+                        $(this).find('iframe').css('pointer-events', 'none');
+                    });
+                });
+
+            </script>
+        </head>
+        <body>
+            <div id="top-line-wrap">
+                <div id="top-line">
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(107, 165, 189); height: 10px;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(196, 160, 108); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(255, 208, 140); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(193, 80, 9); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(71, 78, 81); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(107, 165, 189); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(196, 160, 108); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(255, 208, 140); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(193, 80, 9); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(71, 78, 81); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(107, 165, 189); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(196, 160, 108); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(255, 208, 140); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(193, 80, 9); height: 10px; overflow: hidden; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background-color: rgb(71, 78, 81); overflow: hidden; height: 10px; background-position: initial initial; background-repeat: initial initial;"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#6ba5bd"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c4a06c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#ffd08c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c15009"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#474e51"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#6ba5bd"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c4a06c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#ffd08c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c15009"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#474e51"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#6ba5bd"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c4a06c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#ffd08c"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#c15009"></span></div>
+                    <div class="chunk">&nbsp;<span class="filler" style="background:#474e51"></span></div>
+                </div>
+            </div>
+            <div id="logo" align="center"><br>
+                <a href="index.html"><img src="img/logo.png" width="200" alt="Mojoland logo"></a>
+            </div>
+            <nav class="navbar" id="navigation-bar" style="margin-bottom: 0px; border: 0px;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="dropdown">
+                                <a href="parks.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parks <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="parks.html#lagoonwaterpark" onclick="location.reload();">Lagoon Water Park</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="parks.html#adventurepark" onclick="location.reload();">Adventure Park</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="parks.html#aerosports" onclick="location.reload();">Aero Sports Park</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="booktickets.html">Book Tickets</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                          
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="container" style="background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 style="font-weight: bold; font-family: 'Raleway', sans-serif;">Book Tickets</h2>
+                        <br>
+                    </div>
+                </div>
+                <!-- -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="activity-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Select Date </label>
+                                        <input class="form-control" type="text" placeholder="Click here" name="book_date" value='' id="book_date" readonly>
+                                        <script type="text/javascript">
+                                            $(function() {
+                                                $('input[name="book_date"]').daterangepicker({
+                                                    singleDatePicker: true,
+                                                    showDropdowns: true
+                                                },
+                                                function (start, end, label){
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h3 style="font-weight: bold;">Lagoon Water Park</h3>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Students </label>
+                                        <select class="form-control water" name="studentWater" id="studentWater">
+                                        <option value=0>0</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option><option value=11>11</option><option value=12>12</option></select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Adults </label>
+                                        <select class="form-control water" name="adultsWater" id="adultsWater">
+                                        <option value=0>0</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option><option value=11>11</option><option value=12>12</option></select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Price <small style="font-size:10px;">(INR.)</small> </label>
+                                        <input class="form-control totalAmount water" type="text" value="0" name="totalWater" id="WaterAmount" readonly>
+                                        <script type="text/javascript">
+                                            $("#studentWater").change(function() {
+                                                $('input[name="totalWater"]').val(parseInt($('#studentWater option:selected').attr("value")) * 500 + 
+                                                    parseInt($('#adultsWater option:selected').attr("value")) * 600);
+                                            });
+                                            $("#adultsWater").change(function() {
+                                                $('input[name="totalWater"]').val(parseInt($('#studentWater option:selected').attr("value")) * 500 + 
+                                                    parseInt($('#adultsWater option:selected').attr("value")) * 600);
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="activity-form">
+                                    <div class="col-md-3">
+                                        <h3 style="font-weight: bold;">Adventure Park</h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Students </label>
+                                            <select class="form-control Adventure" name="studentAdventure" id="studentAdventure">
+                                            <option value=0>0</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option><option value=11>11</option><option value=12>12</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label> Adults </label>
+                                            <select class="form-control Adventure" name="adultsAdventure" id="adultsAdventure">
+                                            <option value=0>0</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option><option value=11>11</option><option value=12>12</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Price <small style="font-size:10px;">(INR.)</small> </label>
+                                            <input id="AdventureTotal" type="text" name="totalAdventure" class="form-control Adventure" value="0" readonly>
+                                            <script type="text/javascript">
+                                                $("#studentAdventure").change(function() {
+                                                    $('input[name="totalAdventure"]').val(parseInt($('#studentAdventure option:selected').attr("value")) * 300 + 
+                                                        parseInt($('#adultsAdventure option:selected').attr("value")) * 400);
+                                                });
+                                                $("#adultsAdventure").change(function() {
+                                                    $('input[name="totalAdventure"]').val(parseInt($('#studentAdventure option:selected').attr("value")) * 300 + 
+                                                        parseInt($('#adultsAdventure option:selected').attr("value")) * 400);
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="activity-form">
+                                    <div class="col-md-3">
+                                        <h3 style="font-weight: bold;">Combo</h3>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Students </label>
+                                            <select class="form-control combo" name="comboStudents" id="comboStudents">
+                                            <option value=0>0</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label> Adults </label>
+                                            <select class="form-control combo" name="adultsCombo" id="adultsCombo">
+                                            <option value=0>0</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Price <small style="font-size:10px;">(INR.)</small> </label>
+                                            <input id="ComboTotal" class="form-control " type="text" value="0" name="totalCombo" id="" readonly>
+                                            <script type="text/javascript">
+                                                $("#comboStudents").change(function() {
+                                                    $('input[name="totalCombo"]').val(parseInt($('#comboStudents option:selected').attr("value")) * 700 + 
+                                                        parseInt($('#adultsCombo option:selected').attr("value")) * 800);
+                                                });
+                                                $("#adultsCombo").change(function() {
+                                                    $('input[name="totalCombo"]').val(parseInt($('#comboStudents option:selected').attr("value")) * 700 + 
+                                                        parseInt($('#adultsCombo option:selected').attr("value")) * 800);
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group total-amount">
+                                        <label style="color:#a62d43;">Total Amount <span style="font-size: 12px;">(INR.)</span> </label>
+                                        <input style="background: none;text-align: center;color: #446627;font-size: 27px;border: 0px;box-shadow: none;font-weight: bold;" type="text" value="" name="total" id="total" readonly>
+                                        <script type="text/javascript">
+                                            $("#studentWater, #studentAdventure, #comboStudents, #adultsCombo, #adultsAdventure, #adultsWater").change(function() {
+                                                $("#total").val(parseInt($("#WaterAmount").val()) + parseInt($("#AdventureTotal").val()) + parseInt($("#ComboTotal").val()));
+                                            })
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label style="visibility:hidden;">Book Now </label>
+                                        <button type="submit" id="actionbutt" class="btn btn-lg btn-block btn-primary" name="action" value="bookNow">Book Now!</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+
+                        </div>
+                        <span style="display:block;text-align:center" class="note"><b>Note:</b> <small>Tickets once sold can not be cancelled or returned.</small></span>
+                        <br><br>
+
+                    <!-- -->
+
+                </div>
+                </div>
+            </div>
+            <div class="container" id="footercontainer">
+                <div class="row">
+                    <br><br>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <h4><a href="parks.html#lagoonwaterpark">Lagoon Water Park</a></h4>
+                        <small>
+                            Palm Beach <br>
+                            Wave Pool <br>
+                            Fun Pool <br>
+                            Slides <br>
+                            Pendulum <br>
+                            Volcanic Water Fall <br>
+                            Rain Dance <br>
+                            Foam Dance <br>
+                            The Beach Shack Cafe <br>
+                        </small>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <h4><a href="parks.html#adventurepark">Adventura Adventure Park</a></h4>
+                        <small>
+                            ATV Track <br>
+                            Bungee Ejection <br>
+                            Free Fall <br>
+                            Zip lines <br>
+                            Rock Climbing <br>
+                            High Rope <br>
+                            Low Rope <br>
+                            Shooting <br>
+                            Archery <br>
+                            Sky Cycling <br>
+                        </small>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <h4><a href="parks.html#aerosports">Aero Sports</a></h4>
+                        <small>
+                            Paramotoring <br>
+                            Parasailing <br>
+                        </small>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        
+                       
+                        <h4>Contact Us</h4>
+                        <small>
+                            <a href="mailto:kaushikdere@gmail.com">Email </a><br>
+                        </small>
+                    </div>
+                </div>
+                <hr style="background-color: #ddd; color: #ddd; border-color: #ddd;">
+                <div class="row" style="padding: 10px;">
+                    
+                   
+                </div>
+            </div>
+            <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+            <script type="text/javascript">
+                window.sr = ScrollReveal({duration: 500, distance:'50px', easing:'linear', delay:200, scale : 1});
+                sr.reveal('#panelcontainer');
+                sr.reveal('#secondcontainer');
+                sr.reveal('#mapcontainer');
+                sr.reveal('#footercontainer');
+            </script>
+        </body>
+    </html>
+
